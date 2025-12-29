@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- Scan Brackets (yellow) -->
+  <path d="M8 20V12C8 10.9 8.9 10 10 10H20" stroke="#FFD600" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M44 10H54C55.1 10 56 10.9 56 12V20" stroke="#FFD600" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M56 44V52C56 53.1 55.1 54 54 54H44" stroke="#FFD600" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M20 54H10C8.9 54 8 53.1 8 52V44" stroke="#FFD600" stroke-width="3" stroke-linecap="round"></path>
+  
+  <!-- Camera body -->
+  <rect x="16" y="22" width="32" height="22" rx="3" fill="#424242" stroke="black" stroke-width="3"></rect>
+  
+  <!-- Camera top hump -->
+  <path d="M24 22V18C24 16.9 24.9 16 26 16H38C39.1 16 40 16.9 40 18V22" fill="#616161" stroke="black" stroke-width="3"></path>
+  
+  <!-- Shutter button -->
+  <circle cx="42" cy="16" r="2" fill="#FF5252"></circle>
+  
+  <!-- Lens outer ring -->
+  <circle cx="32" cy="33" r="7" fill="#212121" stroke="black" stroke-width="3"></circle>
+  
+  <!-- Lens inner glass -->
+  <circle cx="32" cy="33" r="3" fill="#90CAF9" stroke="black" stroke-width="2"></circle>
+</svg>

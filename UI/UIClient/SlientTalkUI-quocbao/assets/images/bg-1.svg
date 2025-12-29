@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 390 844" preserveAspectRatio="none">
+  <!-- Background -->
+  <rect width="390" height="844" fill="#2C6AEF"></rect>
+
+  <!-- Stronger top-left arc/wave -->
+  <path d="M-40,20 Q120,80 240,10" stroke="white" stroke-width="3" fill="none" opacity="0.25"></path>
+  <path d="M-30,80 Q100,140 220,60" stroke="white" stroke-width="2" fill="none" opacity="0.18"></path>
+
+  <!-- Bigger translucent circle top-left -->
+  <circle cx="80" cy="100" r="70" fill="white" opacity="0.08"></circle>
+
+  <!-- Denser top-left dots -->
+  <circle cx="40" cy="40" r="4" fill="white" opacity="0.2"></circle>
+  <circle cx="120" cy="60" r="3" fill="white" opacity="0.15"></circle>
+  <circle cx="160" cy="40" r="3.5" fill="white" opacity="0.18"></circle>
+  <circle cx="200" cy="80" r="2.5" fill="white" opacity="0.12"></circle>
+
+  <!-- Bottom-right accent circle -->
+  <circle cx="360" cy="820" r="80" fill="white" opacity="0.1"></circle>
+
+  <!-- Bottom-left accent arc -->
+  <path d="M0,780 Q60,700 140,740" stroke="white" stroke-width="2" fill="none" opacity="0.18"></path>
+
+  <!-- Subtle dotted pattern bottom-right -->
+  <circle cx="320" cy="740" r="5" fill="white" opacity="0.15"></circle>
+  <circle cx="340" cy="760" r="4" fill="white" opacity="0.12"></circle>
+  <circle cx="360" cy="780" r="3" fill="white" opacity="0.2"></circle>
+
+  <!-- Decorative diagonal wave (kept outside center area) -->
+  <path d="M220,600 Q300,660 380,720" stroke="white" stroke-width="2" fill="none" opacity="0.1"></path>
+</svg>

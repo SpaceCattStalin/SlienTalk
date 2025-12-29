@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+        context: .
+        dockerfile: API/Dockerfile    
+    container_name: slientalk-api
+    depends_on:
+      - sqlserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=MyDB;User Id=sa;Password=4664lythihonG*;"
+    ports:
+      - "8080:80" 
+    volumes:
+      - ./Images:/app/Images
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "4664lythihonG*"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+volumes:
+  sql_data:
+

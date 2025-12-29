@@ -1,0 +1,89 @@
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { IOverlayComponentProps } from 'react-native-interactive-walkthrough';
+import { colors } from '@/global/theme';
+import Animated, { FadeInDown, FadeOutUp, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+
+const CollectionScreenOverlay = ({
+    next,
+    step: { mask },
+}: IOverlayComponentProps) => {
+    const scale = useSharedValue(1);
+
+    const animatedStyle = useAnimatedStyle(() => ({
+        transform: [{ scale: scale.value }],
+    }));
+
+    return (
+        <Animated.View
+            style={{
+                ...styles.container,
+                top: mask.y + mask.height,
+                left: 50
+            }}
+            entering={FadeInDown.duration(300)}
+            exiting={FadeOutUp.duration(200)}
+        >
+            <View style={styles.pointer} />
+            <View style={styles.overlay}>
+                <Text style={styles.subtitle}>
+                    Hãy xem thử có gì trong 1 bộ sưu tập nào!
+                </Text>
+            </View>
+        </Animated.View>
+    );
+};
+
+export default CollectionScreenOverlay;
+
+const styles = StyleSheet.create({
+    container: {
+        alignItems: "flex-start",
+        position: 'absolute'
+    },
+    pointer: {
+        width: 0,
+        height: 0,
+        borderLeftWidth: 12,
+        borderRightWidth: 12,
+        borderBottomWidth: 16,
+        borderLeftColor: "transparent",
+        borderRightColor: "transparent",
+        borderBottomColor: colors.primary300,
+        marginLeft: 20,
+    },
+    overlay: {
+        backgroundColor: colors.primary300,
+        padding: 16,
+        borderRadius: 24,
+        maxWidth: "85%",
+        alignSelf: "flex-start",
+        marginTop: -1,
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: "700",
+        marginBottom: 6,
+        color: "white",
+    },
+    subtitle: {
+        fontSize: 16,
+        fontWeight: "500",
+        lineHeight: 21,
+        color: "white",
+        height: 40
+    },
+    button: {
+        marginTop: 6,
+        alignSelf: "flex-end",
+        backgroundColor: "rgba(255,255,255,0.3)",
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+        borderRadius: 8,
+    },
+    buttonText: {
+        color: "white",
+        fontWeight: "600",
+        fontSize: 14,
+    },
+});
